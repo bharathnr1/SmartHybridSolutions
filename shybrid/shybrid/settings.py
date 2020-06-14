@@ -117,7 +117,7 @@ USE_TZ = True
 
 
 #EMAIL SETTINGS
-SENDGRID_API_KEY = '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'
+SENDGRID_API_KEY = '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'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_ADMIN = 'bharath.nr1@gmail.com'
