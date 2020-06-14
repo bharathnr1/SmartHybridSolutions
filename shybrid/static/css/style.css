@@ -143,21 +143,68 @@ margin, padding
 Navbar
 ================================= */
 
-nav {
+/* nav ul{ */
+	/* position: absolute; */
+	/* top: 50%;
+	left: 50%; */
+	/* transform: (-50%, -50%); */
+	/* display: flex; */
+/* } */
+
+/* nav ul li{
+	list-style: none;
+} */
+
+/* nav ul li a{
 	position: relative;
-    /* bottom: unset; */
+	text-decoration: none;
+	font size: 2em;
+	margin: 0 15px;
+} */
+
+/* nav ul li a:before{
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 0;
+	height: 3px;
+	transition: .5s;
+}
+
+nav ul li a:hover{
+	width: 100%;
+}
+
+nav ul li a:after{
+	content: '';
+	position: absolute;
+	top:0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: .5s;
+}
+ul li:hover a:after{
+    width: 100%;
+} */
+
+nav {
+	position: fixed;
+    bottom: unset;
     width: 120px;
     height: 50px;
     color: #fff;
     border-radius: 50px;
     cursor: pointer;
-    border: 2px solid #00c132;
+    border: 2px solid #87b9a2;
     transition: all 0.4s;
 	overflow: hidden;
 	top: 650px;
     left: 40px;
     z-index: 100;
-    background: #fff;
+    background: #87b9a2;
 
   }
   nav:before {
@@ -165,16 +212,16 @@ nav {
     position: absolute;
     left: 25%;
     bottom: 12px;
-    /* transform: translateX(-50%); */
-    /* line-height: 80px; */
-    background: #fff;
-    color: #71c55d;
+    background: #87b9a2;
+    color: #fff;
     font-size: 22px;
-    /* font-weight: 800; */
     z-index: 11;
     transition: all 0.3s;
   }
   nav ul:hover{
+	color: #87b9a2;
+    background: #fff;
+
   }
 
   nav ul {
@@ -183,26 +230,24 @@ nav {
 	list-style: none;
 	align-content: center;
 	justify-content: center;
+	overflow: hidden;
   }
 
   
   nav ul li a {
-	color: #71c55d;
+	color: #3c5248;
 	font-size: 24px;
 	text-decoration: none;
 	margin: 0 -50px;
-	/* margin: 0 10px;
-	padding: 10px 15px; */
 	border-radius: 5px;
 	opacity: 0;
 	pointer-events: none;
-	transition: all 0.4s;
+	transition: all 0.9s;
   }
   nav li a.active,
   nav li a:hover {
-	/* background: #0c1540; */
 	text-decoration: none;
-	color: #4b963a !important;
+	color: #3c5248 !important;
   }
   nav._expand {
 	width: 550px;
@@ -219,6 +264,9 @@ nav {
 	font-size: 20px;
   }
   
+  .btn-theme {
+    background: #3c5248 !important;
+}
 /* ================================
 Home sections
 ================================= */
@@ -239,13 +287,35 @@ Home sections
 }
 
 .section-heading .heading-line {
-	margin:0 auto;
-	display: block;
-	height: 1px;
-	width: 80px;
-	background: #333;
-	margin-top: 10px;
-	margin-bottom: 20px;
+	margin: 0 auto;
+    display: block;
+    height: 3px;
+    width: 80px;
+    background: #79A251;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.section-heading-service {
+	margin-bottom: 0px;
+}
+.section-heading-service {
+	margin-bottom: 0px;
+}
+
+.section-heading-service h2 {
+	font-size: 38px;
+	text-transform: uppercase;
+}
+
+.section-heading-service .heading-line {
+	margin: 0 auto;
+    display: block;
+    height: 3px;
+    width: 80px;
+    background: #79A251;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 
@@ -444,8 +514,10 @@ About
 ================================= */
 
 #about .about-img {
-  height: 350px;
-  overflow: hidden;
+	height: 500px;
+    overflow: hidden;
+    position: relative;
+    bottom: 40px;
 }
 
 #about .about-img img {
@@ -463,37 +535,57 @@ About
   }
 }
 
-#about .content{
+ .content{
 	background: #fff;
+	margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
 }
-#about .content h2 {
+.content h1 {
+	color: #333;
+	font-weight: 300;
+	font-size: 24px;
+	text-align: center;
+  }
+
+ .content h2 {
   color: #333;
   font-weight: 300;
   font-size: 24px;
   text-align: left;
 }
+.content h5 {
+	font-weight: 500;
+	font-size: 20px;
+	text-align: center;
+  }
 
-#about .content h3 {
+ .content h3 {
   color: #777;
   font-weight: 300;
   font-size: 18px;
   line-height: 26px;
-  font-style: italic;
   text-align: left;
 }
 
-#about .content p {
+ .content p {
   line-height: 26px;
   text-align: left;
 }
 
-#about .content p:last-child {
+.speciall-p {
+  font-size: 17px;
+}
+
+ .content p:last-child {
   margin-bottom: 0;
 }
 
 /* ================================
 Team
 ================================= */
+#team{
+	margin-left: 100px;
+}
 .box-team img {
 	margin-bottom: 30px;
 }
@@ -682,6 +774,7 @@ Works
 .img-circle {
     border-radius: 50%;
     height: 300px;
+	width: 290px;
 }
 	/* My Custom ends */
 
@@ -942,7 +1035,8 @@ more media queries
 	/* font-family: 'Cinzel' !important; */
   }
   .back-white{
-	background: #fff;;
+	background: #fff;
+	visibility: visible !important;
   }
   *{
 	  margin: 0;
@@ -973,43 +1067,13 @@ more media queries
 	  transform-origin: top left;
 	  overflow-y: scroll;
 	  overflow-x: hidden;
-	  position: absolute;
+	  position: fixed;
 	  scroll-behavior: smooth;
 	  -ms-overflow-style: none;
   }
   ::-webkit-scrollbar{
 	  display:none;
   }
-  .navv ul{
-	  position: fixed;
-	  top: 15%;
-	  left:0;
-	  transform: translateY(-50%);
-	  margin: 0;
-	  padding: 0;
-	  z-index: 1;
-  }
-  .navv ul li{
-	  list-style: none;
-  }
-  .navv ul li a{
-	  display: block;
-	  text-decoration: none;
-	  height: 30px;
-	  line-height: 30px;
-	  font-size: 24;
-	  width: 140px;
-	  color: #262626;
-	  margin: 4px 0;
-	  padding-left: 15px;
-	  text-transform: uppercase;
-	  border-top-right-radius: 3px ;
-	  border-bottom-right-radius: 3px ;
-  }
-  .navv ul li a:hover{
-	  background: #dff0d8;
-	  color:262626;
-	  }
 
 	  .flex-container {
         /* We first create a flex layout context */
@@ -1042,11 +1106,11 @@ more media queries
         .gallery img{
             width: 230px;
             padding: 5px;
-            /* filter: grayscale(100%); */
+            filter: grayscale(0%);
             transition: 1s;
         }
         .gallery img:hover{
-            filter: grayscale(0%);
+            /* filter: grayscale(50%); */
             transform: scale(1.1);
         }
 
